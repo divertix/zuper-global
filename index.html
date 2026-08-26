@@ -42,7 +42,7 @@
   header{ background:var(--paper); border-bottom:1px solid var(--line); position:sticky; top:0; z-index:50; }
   .header-inner{
     max-width:1280px; margin:0 auto; padding:16px 24px;
-    display:flex; align-items:center; gap:24px;
+    display:flex; align-items:center; justify-content:space-between; gap:24px;
   }
   .logo{ font-weight:900; font-size:1.5rem; color:var(--blue); letter-spacing:-0.02em; }
   .search-bar{
@@ -183,6 +183,21 @@
   @media (max-width:700px){ .clause{ grid-template-columns:1fr; gap:6px; } }
   .callout{ background:var(--blue-pale); border-left:3px solid var(--blue); border-radius:0 8px 8px 0; padding:14px 18px; font-size:0.84rem; color:var(--blue-dark); margin-top:12px; }
 
+
+  .company-label{ font-size:0.76rem; font-weight:700; color:var(--muted); letter-spacing:0.03em; }
+  .area-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:18px; }
+  .area-card{ border:1px solid var(--line); border-radius:var(--radius); padding:28px; background:var(--paper); }
+  .area-card .icon{ width:42px; height:42px; display:flex; align-items:center; justify-content:center; border-radius:10px; background:var(--blue-pale); margin-bottom:16px; font-size:1.2rem; }
+  .area-card h3{ font-size:1.05rem; margin-bottom:8px; }
+  .area-card p{ color:var(--muted); font-size:0.92rem; }
+  .corp-intro{ background:var(--off); border-top:1px solid var(--line); border-bottom:1px solid var(--line); }
+  .corp-intro-inner{ max-width:1280px; margin:0 auto; padding:46px 24px; display:grid; grid-template-columns:1fr 1fr; gap:32px; align-items:start; }
+  .corp-intro h2{ font-size:clamp(1.35rem,2.6vw,1.8rem); margin-bottom:12px; }
+  .corp-intro p{ color:var(--muted); max-width:62ch; }
+  .corp-points{ display:grid; gap:12px; }
+  .corp-point{ border-left:3px solid var(--blue); padding:10px 14px; background:#fff; border-radius:0 8px 8px 0; font-size:0.9rem; }
+  @media (max-width:820px){ .area-grid,.corp-intro-inner{ grid-template-columns:1fr; } .company-label{ display:none; } }
+
   /* ---------- Footer ---------- */
   footer{ background:var(--blue-dark); color:#fff; }
   .footer-inner{ max-width:1280px; margin:0 auto; padding:56px 24px 0; display:grid; grid-template-columns:1.3fr 1fr 1fr 1fr; gap:24px; border-bottom:1px solid rgba(255,255,255,0.15); }
@@ -204,26 +219,22 @@
 </head>
 <body>
 
-<div class="utility-bar">Envío a toda España y la Unión Europea · Pago con tarjeta 100% seguro</div>
+<div class="utility-bar">Comercio electrónico · España y Unión Europea</div>
 
 <header>
   <div class="header-inner">
     <a href="index.html" class="logo">ZUPER</a>
-    <div class="search-bar">🔍 Buscar productos de moda y hogar...</div>
-    <div class="header-icons">
-      <span class="cart"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="9" cy="20" r="1"></circle><circle cx="19" cy="20" r="1"></circle><path d="M3 4h2l2.6 10.4a2 2 0 0 0 2 1.6h7.8a2 2 0 0 0 2-1.6L21 8H6"></path></svg>Carrito</span>
-    </div>
+    <div class="company-label">ZUPER GLOBAL LLC</div>
   </div>
   <nav class="cat-nav">
     <div class="cat-nav-inner">
-      <a href="#hombre">Moda Hombre</a>
-      <a href="#mujer">Moda Mujer</a>
-      <a href="#hogar">Hogar</a>
+      <a href="index.html">Inicio</a>
       <a href="nosotros.html">Nosotros</a>
+      <a href="#operacion">Operación</a>
+      <a href="#contacto">Contacto</a>
       <a href="terminos.html">Términos</a>
       <a href="reembolsos.html">Reembolsos</a>
       <a href="privacidad.html">Privacidad</a>
-      <a href="#contacto">Contacto</a>
     </div>
   </nav>
 </header>
@@ -231,153 +242,50 @@
 <div class="hero">
   <div class="hero-inner">
     <div>
-      <h1>Moda y hogar, todo en un solo lugar.</h1>
-      <p>ZUPER reúne marcas de ropa, calzado, accesorios y artículos para el hogar, con envíos a toda España y la Unión Europea, y pago seguro con tarjeta.</p>
-      <a href="#hombre" class="cta">Ver catálogo</a>
+      <h1>Comercio electrónico para moda, hogar y consumo.</h1>
+      <p>ZUPER GLOBAL LLC desarrolla y gestiona operaciones de comercio electrónico orientadas a clientes de España y la Unión Europea.</p>
+      <a href="nosotros.html" class="cta">Conoce ZUPER</a>
     </div>
     <div class="hero-badge">
-      <div>🚚 Envíos a toda España y la Unión Europea</div>
-      <div>💳 Pago seguro con tarjeta</div>
-      <div>↩️ 14 días para devoluciones</div>
+      <div>🌍 Cobertura en España y la Unión Europea</div>
+      <div>🛍️ Operación enfocada en comercio electrónico</div>
+      <div>↩️ Políticas claras de reembolso y devolución</div>
       <div>🏢 ZUPER GLOBAL LLC · Florida, EE. UU.</div>
     </div>
   </div>
 </div>
 
-<section id="hombre">
-  <div class="section-title"><h2>Moda Hombre</h2><span class="see-all">Ver todo →</span></div>
-  <div class="grid">
-    <div class="card">
-      <div class="card-img" style="padding:0;"><img src="https://images.unsplash.com/photo-1582261484646-a545de6d2382?w=600&auto=format&fit=crop&q=70" alt="Camisa de lino azul" style="width:100%; height:100%; object-fit:cover;"></div>
-      <div class="card-body"><div class="cat">Ropa</div><div class="name">Camisa de lino azul</div>
-        <div class="price-row"><span class="now">€39</span><span class="was">€49</span><span class="off">-20%</span></div>
-      </div>
+<div class="corp-intro">
+  <div class="corp-intro-inner">
+    <div>
+      <h2>Sobre nuestra operación</h2>
+      <p>ZUPER reúne y desarrolla propuestas comerciales en categorías de moda, accesorios y hogar. Este sitio presenta información corporativa, datos de contacto y las políticas aplicables a nuestra operación.</p>
     </div>
-    <div class="card">
-      <div class="card-img" style="padding:0;"><img src="https://images.unsplash.com/photo-1624548140129-74786c5f1279?w=600&auto=format&fit=crop&q=70" alt="Chaqueta bomber azul" style="width:100%; height:100%; object-fit:cover;"></div>
-      <div class="card-body"><div class="cat">Ropa</div><div class="name">Chaqueta bomber azul marino</div>
-        <div class="price-row"><span class="now">€59</span><span class="was">€79</span><span class="off">-25%</span></div>
-      </div>
-    </div>
-    <div class="card">
-      <div class="card-img" style="padding:0;"><img src="https://images.unsplash.com/photo-1718252540617-6ecda2b56b57?w=600&auto=format&fit=crop&q=70" alt="Pantalón chino" style="width:100%; height:100%; object-fit:cover;"></div>
-      <div class="card-body"><div class="cat">Ropa</div><div class="name">Pantalón chino beige</div>
-        <div class="price-row"><span class="now">€35</span></div>
-      </div>
-    </div>
-    <div class="card">
-      <div class="card-img" style="padding:0;"><img src="https://images.unsplash.com/photo-1676379827610-c380c52db0c6?w=600&auto=format&fit=crop&q=70" alt="Zapatillas urbanas blancas" style="width:100%; height:100%; object-fit:cover;"></div>
-      <div class="card-body"><div class="cat">Calzado</div><div class="name">Zapatillas urbanas blancas</div>
-        <div class="price-row"><span class="now">€65</span><span class="was">€85</span><span class="off">-24%</span></div>
-      </div>
-    </div>
-    <div class="card">
-      <div class="card-img" style="padding:0;"><img src="https://images.unsplash.com/photo-1574201635302-388dd92a4c3f?w=600&auto=format&fit=crop&q=70" alt="Suéter cuello redondo gris" style="width:100%; height:100%; object-fit:cover;"></div>
-      <div class="card-body"><div class="cat">Ropa</div><div class="name">Suéter cuello redondo gris</div>
-        <div class="price-row"><span class="now">€32</span></div>
-      </div>
+    <div class="corp-points">
+      <div class="corp-point"><strong>Empresa registrada:</strong> ZUPER GLOBAL LLC</div>
+      <div class="corp-point"><strong>Mercado:</strong> España y Unión Europea</div>
+      <div class="corp-point"><strong>Canal:</strong> Comercio electrónico</div>
     </div>
   </div>
-</section>
+</div>
 
-<section id="mujer">
-  <div class="section-title"><h2>Moda Mujer</h2><span class="see-all">Ver todo →</span></div>
-  <div class="grid">
-    <div class="card">
-      <div class="card-img" style="padding:0;"><img src="https://images.unsplash.com/photo-1602010069450-0a62034f235c?w=600&auto=format&fit=crop&q=70" alt="Vestido midi floral" style="width:100%; height:100%; object-fit:cover;"></div>
-      <div class="card-body"><div class="cat">Ropa</div><div class="name">Vestido midi floral</div>
-        <div class="price-row"><span class="now">€45</span><span class="was">€60</span><span class="off">-25%</span></div>
-      </div>
+<section id="operacion">
+  <div class="section-title"><h2>Áreas de operación</h2></div>
+  <div class="area-grid">
+    <div class="area-card">
+      <div class="icon">👕</div>
+      <h3>Moda y accesorios</h3>
+      <p>Selección y comercialización de categorías de ropa, calzado y accesorios a través de canales digitales.</p>
     </div>
-    <div class="card">
-      <div class="card-img" style="padding:0;"><img src="https://images.unsplash.com/photo-1600884350802-c6d0bf14dcc6?w=600&auto=format&fit=crop&q=70" alt="Blusa satinada blanca" style="width:100%; height:100%; object-fit:cover;"></div>
-      <div class="card-body"><div class="cat">Ropa</div><div class="name">Blusa satinada blanca</div>
-        <div class="price-row"><span class="now">€29</span></div>
-      </div>
+    <div class="area-card">
+      <div class="icon">🏠</div>
+      <h3>Hogar</h3>
+      <p>Productos y soluciones orientadas al hogar dentro de una oferta comercial gestionada en línea.</p>
     </div>
-    <div class="card">
-      <div class="card-img" style="padding:0;"><img src="https://images.unsplash.com/photo-1605518215584-5ba74df5dfd8?w=600&auto=format&fit=crop&q=70" alt="Jean mom fit" style="width:100%; height:100%; object-fit:cover;"></div>
-      <div class="card-body"><div class="cat">Ropa</div><div class="name">Jean mom fit</div>
-        <div class="price-row"><span class="now">€42</span></div>
-      </div>
-    </div>
-    <div class="card">
-      <div class="card-img" style="padding:0;"><img src="https://images.unsplash.com/photo-1667314614949-e7e45c8074fd?w=600&auto=format&fit=crop&q=70" alt="Sandalias de tacón bajo" style="width:100%; height:100%; object-fit:cover;"></div>
-      <div class="card-body"><div class="cat">Calzado</div><div class="name">Sandalias de tacón bajo</div>
-        <div class="price-row"><span class="now">€38</span><span class="was">€50</span><span class="off">-24%</span></div>
-      </div>
-    </div>
-    <div class="card">
-      <div class="card-img" style="padding:0;"><img src="https://images.unsplash.com/photo-1610288311735-39b7facbd095?w=600&auto=format&fit=crop&q=70" alt="Cárdigan oversized" style="width:100%; height:100%; object-fit:cover;"></div>
-      <div class="card-body"><div class="cat">Ropa</div><div class="name">Cárdigan oversized beige</div>
-        <div class="price-row"><span class="now">€36</span></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section id="hogar">
-  <div class="section-title"><h2>Hogar</h2><span class="see-all">Ver todo →</span></div>
-  <div class="grid">
-    <div class="card">
-      <div class="card-img" style="padding:0;"><img src="https://images.unsplash.com/photo-1542728929-2b5d9a0c8d48?w=600&auto=format&fit=crop&q=70" alt="Juego de sábanas de algodón" style="width:100%; height:100%; object-fit:cover;"></div>
-      <div class="card-body"><div class="cat">Hogar</div><div class="name">Juego de sábanas de algodón</div>
-        <div class="price-row"><span class="now">€49</span></div>
-      </div>
-    </div>
-    <div class="card">
-      <div class="card-img" style="padding:0;"><img src="https://images.unsplash.com/photo-1694830470387-2e0f234ecaf7?w=600&auto=format&fit=crop&q=70" alt="Set de vajilla de cerámica" style="width:100%; height:100%; object-fit:cover;"></div>
-      <div class="card-body"><div class="cat">Hogar</div><div class="name">Set de vajilla (16 piezas)</div>
-        <div class="price-row"><span class="now">€55</span><span class="was">€70</span><span class="off">-21%</span></div>
-      </div>
-    </div>
-    <div class="card">
-      <div class="card-img" style="padding:0;"><img src="https://images.unsplash.com/photo-1579326882518-21eaa7893b02?w=600&auto=format&fit=crop&q=70" alt="Lámpara de mesa minimalista" style="width:100%; height:100%; object-fit:cover;"></div>
-      <div class="card-body"><div class="cat">Hogar</div><div class="name">Lámpara de mesa minimalista</div>
-        <div class="price-row"><span class="now">€28</span></div>
-      </div>
-    </div>
-    <div class="card">
-      <div class="card-img" style="padding:0;"><img src="https://images.unsplash.com/photo-1576961452143-1f49f6261346?w=600&auto=format&fit=crop&q=70" alt="Cojines decorativos" style="width:100%; height:100%; object-fit:cover;"></div>
-      <div class="card-body"><div class="cat">Hogar</div><div class="name">Set de cojines decorativos (2 uds)</div>
-        <div class="price-row"><span class="now">€24</span></div>
-      </div>
-    </div>
-    <div class="card">
-      <div class="card-img" style="padding:0;"><img src="https://images.unsplash.com/photo-1556912102-ea493a2a5b93?w=600&auto=format&fit=crop&q=70" alt="Set de ollas antiadherentes" style="width:100%; height:100%; object-fit:cover;"></div>
-      <div class="card-body"><div class="cat">Hogar</div><div class="name">Set de ollas (5 piezas)</div>
-        <div class="price-row"><span class="now">€89</span><span class="was">€120</span><span class="off">-26%</span></div>
-      </div>
-    </div>
-    <div class="card">
-      <div class="card-img" style="padding:0;"><img src="https://images.unsplash.com/photo-1618220252344-8ec99ec624b1?w=600&auto=format&fit=crop&q=70" alt="Espejo redondo decorativo" style="width:100%; height:100%; object-fit:cover;"></div>
-      <div class="card-body"><div class="cat">Hogar</div><div class="name">Espejo redondo decorativo</div>
-        <div class="price-row"><span class="now">€42</span></div>
-      </div>
-    </div>
-    <div class="card">
-      <div class="card-img" style="padding:0;"><img src="https://images.unsplash.com/photo-1556910096-6f5e72db6803?w=600&auto=format&fit=crop&q=70" alt="Organizador de cocina de bambú" style="width:100%; height:100%; object-fit:cover;"></div>
-      <div class="card-body"><div class="cat">Hogar</div><div class="name">Organizador de cocina de bambú</div>
-        <div class="price-row"><span class="now">€19</span></div>
-      </div>
-    </div>
-    <div class="card">
-      <div class="card-img" style="padding:0;"><img src="https://images.unsplash.com/photo-1734553529922-bc020a21643b?w=600&auto=format&fit=crop&q=70" alt="Manta tejida para sofá" style="width:100%; height:100%; object-fit:cover;"></div>
-      <div class="card-body"><div class="cat">Hogar</div><div class="name">Manta tejida para sofá</div>
-        <div class="price-row"><span class="now">€33</span></div>
-      </div>
-    </div>
-    <div class="card">
-      <div class="card-img" style="padding:0;"><img src="https://images.unsplash.com/photo-1600369672770-985fd30004eb?w=600&auto=format&fit=crop&q=70" alt="Juego de toallas de baño" style="width:100%; height:100%; object-fit:cover;"></div>
-      <div class="card-body"><div class="cat">Hogar</div><div class="name">Juego de toallas (4 uds)</div>
-        <div class="price-row"><span class="now">€27</span></div>
-      </div>
-    </div>
-    <div class="card">
-      <div class="card-img" style="padding:0;"><img src="https://images.unsplash.com/photo-1643122966676-29e8597257f7?w=600&auto=format&fit=crop&q=70" alt="Set de velas aromáticas" style="width:100%; height:100%; object-fit:cover;"></div>
-      <div class="card-body"><div class="cat">Hogar</div><div class="name">Set de velas aromáticas (3 uds)</div>
-        <div class="price-row"><span class="now">€22</span></div>
-      </div>
+    <div class="area-card">
+      <div class="icon">💻</div>
+      <h3>Operación digital</h3>
+      <p>Gestión de presencia web, atención al cliente y procesos comerciales vinculados al comercio electrónico.</p>
     </div>
   </div>
 </section>
@@ -386,7 +294,7 @@
   <div class="footer-inner">
     <div>
       <h2>Hablemos.</h2>
-      <p>Para consultas sobre pedidos, privacidad o estos términos, escríbenos directamente o completa el formulario.</p>
+      <p>Para consultas sobre nuestra empresa, privacidad o políticas, escríbenos directamente o completa el formulario.</p>
       <form action="mailto:correo@zuperglobal.shop" method="post" enctype="text/plain">
         <input type="text" name="nombre" placeholder="Nombre" required>
         <input type="email" name="email" placeholder="Correo electrónico" required>
