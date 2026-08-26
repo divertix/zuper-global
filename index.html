@@ -53,7 +53,9 @@
   .header-icons{ display:flex; align-items:center; gap:20px; font-size:0.78rem; color:var(--ink); }
   .header-icons .cart{
     background:var(--blue); color:#fff; padding:9px 16px; border-radius:100px; font-weight:700; font-size:0.82rem;
+    display:inline-flex; align-items:center; gap:7px;
   }
+  .header-icons .cart svg{ width:16px; height:16px; stroke:#fff; fill:none; stroke-width:2; stroke-linecap:round; stroke-linejoin:round; }
   .nav-toggle{ display:none; }
 
   .cat-nav{ background:var(--paper); border-bottom:1px solid var(--line); }
@@ -202,15 +204,14 @@
 </head>
 <body>
 
-<div class="utility-bar">Envío a toda España · Pago con tarjeta 100% seguro · zuperglobal.shop</div>
+<div class="utility-bar">Envío a toda España y la Unión Europea · Pago con tarjeta 100% seguro · zuperglobal.shop</div>
 
 <header>
   <div class="header-inner">
     <a href="index.html" class="logo">ZUPER</a>
     <div class="search-bar">🔍 Buscar productos de moda y hogar...</div>
     <div class="header-icons">
-      <span>Mi cuenta</span>
-      <span class="cart">🛒 Carrito</span>
+      <span class="cart"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="9" cy="20" r="1"></circle><circle cx="19" cy="20" r="1"></circle><path d="M3 4h2l2.6 10.4a2 2 0 0 0 2 1.6h7.8a2 2 0 0 0 2-1.6L21 8H6"></path></svg>Carrito</span>
     </div>
   </div>
   <nav class="cat-nav">
@@ -231,11 +232,11 @@
   <div class="hero-inner">
     <div>
       <h1>Moda y hogar, todo en un solo lugar.</h1>
-      <p>ZUPER reúne marcas de ropa, calzado, accesorios y artículos para el hogar, con envíos a toda España y pago seguro con tarjeta.</p>
+      <p>ZUPER reúne marcas de ropa, calzado, accesorios y artículos para el hogar, con envíos a toda España y la Unión Europea, y pago seguro con tarjeta.</p>
       <a href="#hombre" class="cta">Ver catálogo</a>
     </div>
     <div class="hero-badge">
-      <div>🚚 Envíos a toda España</div>
+      <div>🚚 Envíos a toda España y la Unión Europea</div>
       <div>💳 Pago seguro con tarjeta</div>
       <div>↩️ 14 días para devoluciones</div>
       <div>🏢 ZUPER GLOBAL LLC · Florida, EE. UU.</div>
